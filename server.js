@@ -8,7 +8,7 @@ app.get("/professional", (req, res)=>{
         professionalName: "Casey Owens",
         base64Image: require("./image"),
         nameLink: {firstName: "Casey", lastName: "Owens", url: "https://www.linkedin.com/in/caseyowens"},
-        primaryDescription: " Software Engineer with 5 years of experience in developing scalable web applications.",
+        primaryDescription: " I am a Software Developer Major",
         workDescription1: "Hope to work somewhere doing Software Development.",
         workDescription2: "I have experience in Game Development with GameMaker Studio 2 and Godot.",
         linkTitleText: "Here's my LinkedIn and GitHub",
