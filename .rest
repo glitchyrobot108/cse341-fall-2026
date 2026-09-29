@@ -1,0 +1,31 @@
+GET http://localhost:8080/
+
+###
+
+GET http://localhost:8080/contacts
+
+###
+
+GET http://localhost:8080/contacts/0
+
+###
+
+GET http://localhost:8080/contacts/1
+
+###
+
+http://cse341-fall-2026.onrender.com/
+
+###
+
+GET http://cse341-fall-2026.onrender.com/contacts
+
+###
+
+GET http://cse341-fall-2026.onrender.com/contacts/0
+
+###
+
+GET http://cse341-fall-2026.onrender.com/contacts/1
+
+###
