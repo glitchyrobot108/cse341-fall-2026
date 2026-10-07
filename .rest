@@ -1,31 +1,37 @@
-GET http://localhost:8080/
+GET http://localhost:3000/contacts
 
 ###
 
-GET http://localhost:8080/contacts
+GET http://localhost:3000/contacts/6abc8ffde69fe2d7126c0e25
 
 ###
 
-GET http://localhost:8080/contacts/0
+POST http://localhost:3000/contacts
+content-type: application/json
+
+{
+  "firstName": "Bob",
+  "lastName": "Jones",
+  "email": "bob@email.com",
+  "favoriteColor": "yellow",
+  "birthday": "1-1-2000"
+}
 
 ###
 
-GET http://localhost:8080/contacts/1
+PUT http://localhost:3000/contacts/6ac6bdd3af790e7ea9ab8271
+content-type: application/json
+
+{
+  "firstName": "Joe",
+  "lastName": "Mama",
+  "email": "Joe@email.com",
+  "favoriteColor": "Black",
+  "birthday": "1-1-2002"
+}
 
 ###
 
-http://cse341-fall-2026.onrender.com/
-
-###
-
-GET http://cse341-fall-2026.onrender.com/contacts
-
-###
-
-GET http://cse341-fall-2026.onrender.com/contacts/0
-
-###
-
-GET http://cse341-fall-2026.onrender.com/contacts/1
+DELETE http://localhost:3000/contacts/6ac6c6e1356a98c93e0c94b9
 
 ###
