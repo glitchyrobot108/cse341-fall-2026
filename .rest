@@ -35,3 +35,41 @@ content-type: application/json
 DELETE http://localhost:3000/contacts/6ac6c6e1356a98c93e0c94b9
 
 ###
+
+GET http://cse341-fall-2026.onrender.com/contacts
+
+###
+
+GET http://cse341-fall-2026.onrender.com/contacts/6abc8ffde69fe2d7126c0e25
+
+###
+
+POST http://cse341-fall-2026.onrender.com/contacts
+content-type: application/json
+
+{
+  "firstName": "Bob",
+  "lastName": "Jones",
+  "email": "bob@email.com",
+  "favoriteColor": "yellow",
+  "birthday": "1-1-2000"
+}
+
+###
+
+PUT http://cse341-fall-2026.onrender.com/contacts/6ac6bdd3af790e7ea9ab8271
+content-type: application/json
+
+{
+  "firstName": "Joe",
+  "lastName": "Mama",
+  "email": "Joe@email.com",
+  "favoriteColor": "Black",
+  "birthday": "1-1-2002"
+}
+
+###
+
+DELETE http://cse341-fall-2026.onrender.com/contacts/6ac6c6e1356a98c93e0c94b9
+
+###
