@@ -5,10 +5,11 @@
     "description": "API for Contacts Database on MongoDB for CSE 341",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "cse341-fall-2026.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "http",
+    "https"
   ],
   "paths": {
     "/": {
