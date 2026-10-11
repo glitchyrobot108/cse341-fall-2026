@@ -7,9 +7,6 @@ const swaggerDocument = require("./swagger-output.json")
 
 app.use(express.json())
 app.use("/", require("./routes"))
-app.use("/", (req, res) =>{
-    res.sendFile('directory.html', {root: __dirname })
-})
 app.use("/api-docs", swaggerUIexpress.serve, swaggerUIexpress.setup(swaggerDocument))
 
 app.listen(port)
