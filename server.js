@@ -3,9 +3,12 @@ const bodyParser = require("body-parser")
 const express = require("express")
 const app = express()
 const port = process.env.PORT
+const swaggerUIexpress = require("swagger-ui-express")
+const swaggerDocument = require("./swagger-output.json")
 
 app.use(express.json())
 app.use("/", require("./routes"))
+app.use("/api-docs", swaggerUIexpress.serve, swaggerUIexpress.setup(swaggerDocument))
 
 app.listen(port)
 console.log("Web Server is listening at port " + (port))
