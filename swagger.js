@@ -5,7 +5,7 @@ const doc = {
     title: 'Contacts API',
     description: 'API for Contacts Database on MongoDB for CSE 341'
   },
-  host: 'https://cse341-fall-2026.onrender.com/',
+  host: 'https://cse341-fall-2026.onrender.com',
   schemes: ["http", "https"]
 };
 
