@@ -4,10 +4,8 @@ const doc = {
   info: {
     title: 'Contacts API',
     description: 'API for Contacts Database on MongoDB for CSE 341'
-  },
-  host: 'cse341-fall-2026.onrender.com',
-  schemes: ["http", "https"]
-};
+  }
+}
 
 const outputFile = './swagger-output.json';
 const routes = ["./routes/index.js"]

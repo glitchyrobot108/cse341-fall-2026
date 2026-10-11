@@ -8,6 +8,11 @@ const mongodbController = require("../controllers/mongodb")
 // routes.get("/cindy", lesson1Controller.cindyRoute)
 // routes.get("/bella", lesson1Controller.bellaRoute)
 
+//Directory
+routes.get("/", (req, res)=>{
+    res.send("/contacts or /api-docs")
+})
+
 //GetAll
 routes.get("/contacts", mongodbController.returnAllContactsRoute)
 //GetSingle
@@ -46,5 +51,6 @@ routes.put("/contacts/:id", mongodbController.updateDocumentRoute
 )
 //Delete
 routes.delete("/contacts/:id", mongodbController.deleteDocumentRoute)
+
 
 module.exports = routes
