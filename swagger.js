@@ -5,8 +5,8 @@ const doc = {
     title: 'Cube Buster API',
     description: 'API for Cube Buster Database on MongoDB for CSE 341'
   },
-  host: 'localhost:3000',
-  schemes: ["http", "https"]
+  host: 'https://cube-buster-cse341-fall-2026.onrender.com/',
+  schemes: ["https"]
 };
 
 const outputFile = './swagger-output.json';
