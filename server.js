@@ -6,7 +6,7 @@ const swaggerUIexpress = require("swagger-ui-express")
 const swaggerDocument = require("./swagger-output.json")
 
 app.use(express.json())
-app.use("/", require("./routes"))
+app.use("/", require("./routes/index"))
 app.use("/api-docs", swaggerUIexpress.serve, swaggerUIexpress.setup(swaggerDocument))
 
 app.listen(port)

@@ -1,18 +1,28 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Contacts API",
-    "description": "API for Contacts Database on MongoDB for CSE 341",
+    "title": "Cube Buster API",
+    "description": "API for Cube Buster Database on MongoDB for CSE 341",
     "version": "1.0.0"
   },
-  "host": "cse341-fall-2026.onrender.com",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
     "http",
     "https"
   ],
   "paths": {
-    "/contacts": {
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/customer/": {
       "get": {
         "description": "",
         "responses": {
@@ -32,33 +42,39 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "first_name": {
                   "type": "string",
                   "example": "Bob"
                 },
-                "lastName": {
+                "last_name": {
                   "type": "string",
                   "example": "Jones"
+                },
+                "phone_number": {
+                  "type": "string",
+                  "example": "(111) 222-3333"
                 },
                 "email": {
                   "type": "string",
                   "example": "bob@email.com"
                 },
-                "favoriteColor": {
+                "address": {
                   "type": "string",
-                  "example": "Red"
+                  "example": "123 ABC Street, New York, NY, 12345"
                 },
-                "birthday": {
-                  "type": "string",
-                  "example": "1-1-2000"
+                "renting": {
+                  "type": "array",
+                  "example": [],
+                  "items": {}
                 }
               },
               "required": [
-                "firstName",
-                "lastName",
+                "first_name",
+                "last_name",
+                "phone_number",
                 "email",
-                "favoriteColor",
-                "birthday"
+                "address",
+                "renting"
               ]
             }
           }
@@ -73,7 +89,7 @@
         }
       }
     },
-    "/contacts/{id}": {
+    "/customer/{id}": {
       "get": {
         "description": "",
         "parameters": [
@@ -107,11 +123,15 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "first_name": {
                   "type": "string",
                   "example": ""
                 },
-                "lastName": {
+                "last_name": {
+                  "type": "string",
+                  "example": ""
+                },
+                "phone_number": {
                   "type": "string",
                   "example": ""
                 },
@@ -119,22 +139,154 @@
                   "type": "string",
                   "example": ""
                 },
-                "favoriteColor": {
+                "address": {
                   "type": "string",
                   "example": ""
                 },
-                "birthday": {
-                  "type": "string",
-                  "example": ""
+                "renting": {
+                  "type": "array",
+                  "example": [],
+                  "items": {}
                 }
               },
               "required": [
-                "firstName",
-                "lastName",
+                "first_name",
+                "last_name",
+                "phone_number",
                 "email",
-                "favoriteColor",
-                "birthday"
+                "address",
+                "renting"
               ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "No Content"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/media/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "required": true,
+            "in": "body",
+            "description": "object to create",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "Star Wars"
+                },
+                "release_date": {
+                  "type": "string",
+                  "example": "May 25, 1977"
+                },
+                "media_type": {
+                  "type": "string",
+                  "example": "movie, music, videogame"
+                },
+                "storage_type": {
+                  "type": "string",
+                  "example": "VHS, CD, DVD, RECORD, CASSETTE, CARTRIDGE"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/media/{id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "required": true,
+            "in": "body",
+            "description": "object to edit",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": ""
+                },
+                "release_date": {
+                  "type": "string",
+                  "example": ""
+                },
+                "media_type": {
+                  "type": "string",
+                  "example": "movie, music, videogame"
+                },
+                "storage_type": {
+                  "type": "string",
+                  "example": "VHS, CD, DVD, RECORD, CASSETTE, CARTRIDGE"
+                }
+              }
             }
           }
         ],

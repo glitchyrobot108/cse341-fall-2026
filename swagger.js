@@ -2,10 +2,10 @@ const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
   info: {
-    title: 'Contacts API',
-    description: 'API for Contacts Database on MongoDB for CSE 341'
+    title: 'Cube Buster API',
+    description: 'API for Cube Buster Database on MongoDB for CSE 341'
   },
-  host: 'cse341-fall-2026.onrender.com',
+  host: 'localhost:3000',
   schemes: ["http", "https"]
 };
 
