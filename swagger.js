@@ -5,7 +5,7 @@ const doc = {
     title: 'Cube Buster API',
     description: 'API for Cube Buster Database on MongoDB for CSE 341'
   },
-  host: 'https://cube-buster-cse341-fall-2026.onrender.com/',
+  host: 'cube-buster-cse341-fall-2026.onrender.com',
   schemes: ["https"]
 };
 
