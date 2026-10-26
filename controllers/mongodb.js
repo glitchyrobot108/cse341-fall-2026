@@ -56,5 +56,6 @@ module.exports = {
     returnAllDocuments,
     returnSingleDocumentById,
     createDocument,
+    updateDocument,
     deleteDocument
 }
